@@ -1,5 +1,5 @@
-runtime: python311  # or python313 based on your preference
-
+runtime: python311
+entrypoint: gunicorn -b :$PORT main:app
 handlers:
 - url: /.*
-  script: auto
+script: auto
